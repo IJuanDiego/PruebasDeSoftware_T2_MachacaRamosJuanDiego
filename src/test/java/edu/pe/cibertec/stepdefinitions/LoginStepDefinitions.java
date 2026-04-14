@@ -46,7 +46,7 @@ public class LoginStepDefinitions {
 
     @Then("the user should see the name {string} in the page header")
     public void the_user_should_see_the_name_in_the_page_header(String name) {
-        juan.should(seeThat("Nombre en header",
+        juan.should(seeThat("header",
                         actor -> LoginPage.HEADER_NAME.resolveFor(actor).getText(),
                         containsString("My Account")));
     }
